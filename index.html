@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Escuelita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- MATERIALIZE -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="./css/materialize/libs_materialize_1.0.0_css_materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="./js/materialize/ajax_libs_materialize_1.0.0_js_materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--preloader-->
+    <link rel="stylesheet" href="css/preloader.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="preolader">
+        <div class="spinner-box">
+            <div class="circle-border">
+              <div class="circle-core"></div>
+            </div>  
+          </div>
+    </div>
+    <div id="progress_scroll">
+        <i class="material-icons" id="progress_value">add_box</i>
+    </div>
+    <div class="container">
+        <div class="title">
+            <h1>POSICIONES</h1>
+        </div>
+        <div class="item-list">
+<!--             <div class="box-item">
+                <h3 class="item-icon">🐸</h3>
+                <h3 class="item-name">Diego Gutierrez</h3>
+                <h3 class="item-score">1258</h3>
+            </div>
+            <div class="box-item">
+                <h3 class="item-icon">🦖</h3>
+                <h3 class="item-name">Noe Melo</h3>
+                <h3 class="item-score">1158</h3>
+            </div>
+            <div class="box-item">
+                <h3 class="item-icon">🐷</h3>
+                <h3 class="item-name">Israel Orconi</h3>
+                <h3 class="item-score">1358</h3>
+            </div>
+            <div class="box-item">
+                <h3 class="item-icon">🦖</h3>
+                <h3 class="item-name">Luis Vinces</h3>
+                <h3 class="item-score">1158</h3>
+            </div>
+            <div class="box-item">
+                <h3 class="item-icon">🐸</h3>
+                <h3 class="item-name">Josue Lovato</h3>
+                <h3 class="item-score">1258</h3>
+            </div> -->
+        </div>
+        <div class="background-form" id="popup-form">
+            <div class="popup-form-item">
+                <div class="close-form-button">
+                    <a class="close-main-form-button" id="cancel-main-form-button">
+                        <i class="material-icons right close-main-icon">close</i>
+                    </a>
+                </div>
+                <form id="main_form">
+                    <div class="main-form">
+                        <div class="title_form">
+                            <img src="./images/sheets.png">
+                        </div>
+                        <textarea name="" id="spreadsheet_id_area" cols="1" rows="1" placeholder="URL Spreadsheet" required></textarea>
+                        <input name="" id="spreadsheet_sheet_area" placeholder="Sheet Name" required></input>
+                    </div>
+                    <button class="waves-light btn purple accent-4" id="save-main-form-button" type="submit"><i class="material-icons left">save</i>guardar</button>
+                    <div class="help_icon" title="Ver Manual">
+                        <a id="help_icon"><i class="material-icons">help</i></a>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        <div class="manual" id="manual">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                      <div class="card-content">
+                        <span class="card-title">Manual</span>
+                        <p>Crear el documento con los campos mandatorios (icon, name, score), luego compartir el documento en modo lectura.</p>
+                        <div class="card-image">
+                            <img src="./images/pasos.svg">
+                        </div>
+                        <p>
+                            Colocar en el formulario el link del documento y el nombre de la hoja. (Solo una vez)</p>
+                      </div>
+                      <div class="card-action">
+                        <a id="help_close" class="btn red accent-3">CERRAR</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!--Floating buttons-->
+    <script src="js/preolader.js"></script>
+    <script src="js/storage/storage.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/spreadsheet.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
+
+    <!--source: https://github.com/theotrain/load-google-sheet-data-using-sql/blob/main/script.js-->
+</body>
+</html>
